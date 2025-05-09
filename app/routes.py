@@ -1,11 +1,9 @@
-# app/routes.py
 from flask import Blueprint, request, jsonify, g
 from .models import db, Todo, User
 from functools import wraps
 
 routes_bp = Blueprint('routes', __name__)
 
-# Token-based login_required using Authorization header
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):

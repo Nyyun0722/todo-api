@@ -1,4 +1,3 @@
-# tests/test_routes.py
 import unittest
 from app import create_app
 from app.models import db, User, Todo
